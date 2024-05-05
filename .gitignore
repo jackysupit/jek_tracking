@@ -1,0 +1,11 @@
+# Odoo specific
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.orig
+
+# VSCode specific
+.vscode/
+*.code-workspace
+
