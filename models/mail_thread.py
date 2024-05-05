@@ -37,8 +37,6 @@ class MailThread(models.AbstractModel):
     _inherit = 'mail.thread'
 
     def filter_tracking_fields_by_state(self, tracked_fields, initial_values_dict):
-        print("############### tracked_fields: ", tracked_fields)
-
         new_tracking_fields = {}
         for record in self:
             for field_name, field_value in tracked_fields.items():
@@ -57,8 +55,6 @@ class MailThread(models.AbstractModel):
                 
                 if is_tracking:
                     new_tracking_fields[field_name] = field_value
-        
-        print("############### new_tracking_fields: ", new_tracking_fields)
         return new_tracking_fields
 
 
